@@ -11,7 +11,7 @@ def list_directory(str_path):
             yield from list_directory(path)
 
 
-def print_directory_contents(sPath):
+def print_directory_contents(s_path):
     """
     This function takes the name of a directory
     and prints out the paths files within that
@@ -22,10 +22,10 @@ def print_directory_contents(sPath):
     use os.walk in your answer. We are interested in your
     ability to work with nested structures.
     """
-    if not os.path.isdir(sPath):
+    if not os.path.isdir(s_path):
         raise NotADirectoryError('Not a directory')
 
-    dirs = list_directory(sPath)
+    dirs = list_directory(s_path)
     for d in dirs:
         print(d)
 
